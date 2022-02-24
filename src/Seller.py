@@ -1,6 +1,6 @@
 from User import User
 
-class Customer(User):
+class Seller(User):
     """Class for customer
     
     """
@@ -10,7 +10,6 @@ class Customer(User):
         self._phone = None
         self.order_list = []
         self._address = None
-        print('Created Customer {0._user_name} with {0.email_address}'.format(self))
 
     @property
     def user_name(self):

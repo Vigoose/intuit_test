@@ -16,8 +16,12 @@ class MainApplication():
 
     def run(self) -> None:
         print("I am running!!!")
+        # Create Customer account
         time = Customer("tim", "test@gmail.com")
-        print(time._user_name)
+        # Create Seller account
+
+
+        # Seller begin to create the 
 
 if __name__ == "__main__":
     try:
