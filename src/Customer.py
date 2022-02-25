@@ -8,6 +8,7 @@ class Customer(User):
         self._user_name = user_name
         self.email_address = email_address
         self._phone = None
+        self.account_balance = 0
         self.order_list = []
         self._address = None
         print('Created Customer {0._user_name} with {0.email_address}'.format(self))
@@ -30,3 +31,10 @@ class Customer(User):
 
     def set_address(self, address):
         self._address = address
+    
+    def reload_balance(self, amount: int):
+        if amount < 0:
+            print("You have to reload a positive amount!")
+        else:
+            self.account_balance += amount
+        

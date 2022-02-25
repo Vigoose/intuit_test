@@ -38,3 +38,4 @@ class Seller(User):
         product = Product(product_name=product_name, description = product_description)
         self.product_list.append(product)
         print("Seller {0.user_name} just created a {1} product and now is alive!".format(self, product_name))
+        return product
