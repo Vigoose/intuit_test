@@ -34,8 +34,8 @@ class Seller(User):
     def set_address(self, address):
         self._address = address
 
-    def create_product(self, product_name: str, product_description=None):
-        product = Product(product_name=product_name, description = product_description)
+    def create_product(self, product_name: str, global_product_id, price, description=None):
+        product = Product(product_name=product_name, global_id=global_product_id, price=price, description=description)
         self.product_list.append(product)
         print("Seller {0.user_name} just created a {1} product and now is alive!".format(self, product_name))
         return product

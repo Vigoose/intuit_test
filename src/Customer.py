@@ -4,8 +4,9 @@ class Customer(User):
     """Class for customer
     
     """
-    def __init__(self, user_name: str, email_address: str) -> None:
+    def __init__(self, user_name: str, user_id: int, email_address: str) -> None:
         self._user_name = user_name
+        self.user_id = user_id
         self.email_address = email_address
         self._phone = None
         self.account_balance = 0
