@@ -1,14 +1,30 @@
 import logging
 import datetime
 import traceback
+from typing import List
 
 from Customer import Customer
 from Seller import Seller
+from User import User
+from enum import Enum
+
+from src.Product import Product
 
 GLOBAL_PRODUCT_ID = 0
 GLOBAL_USER_ID = 0
 
 LOGGER = logging.getLogger(__name__)
+
+class UserType(Enum):
+    BUYER = 1
+    SELLER = 2
+
+def init_logging():
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(logging.Formatter('%(asctime)s.%(msecs)03d - %(name)s - %(levelname)s - %(message)s',
+                                                  '%Y-%m-%dT%H:%M:%S'))
+    LOGGER.addHandler(stream_handler)
+    LOGGER.setLevel(logging.INFO)
 
 
 class MainApplication():
@@ -18,6 +34,7 @@ class MainApplication():
 
     def __init__(self) -> None:
         self.entire_products_list = {}
+        init_logging()
 
     def run(self) -> None:
         global GLOBAL_PRODUCT_ID
@@ -69,6 +86,20 @@ class MainApplication():
         print(buyer.account_balance)
 
         # Generated the order and details 
+
+        def create_user(self, user_type, GLOBAL_USER_ID, username):
+            UserType.BUYER
+
+
+        def user_login() -> User:
+            return None
+
+        def purchase_item() -> bool:
+            return None
+
+        def list_all_active_product() -> List[Product]:
+            return None
+
 
 if __name__ == "__main__":
     try:
