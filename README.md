@@ -1,5 +1,11 @@
-
 https://packaging.python.org/en/latest/tutorials/packaging-projects/
+
+docker run -it ecommerce python3 main_function.py
+source ~/intuit_test/venv/bin/activate
+kubectl describe -n kube-system pods/etcd-minikube
+docker build -t ecommerce .
+kubectl apply -t deployment.yaml
+
 Buyer:
   register
   Login
